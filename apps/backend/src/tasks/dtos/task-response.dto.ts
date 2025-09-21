@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { Task, TaskStatus } from '../entities/task.entity';
+import type { Task, TaskStatus } from '../entities/task.entity';
 
 export class TaskResponseDto {
   @ApiProperty()

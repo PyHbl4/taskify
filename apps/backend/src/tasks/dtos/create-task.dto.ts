@@ -8,7 +8,7 @@ import {
   Max,
   Min,
 } from 'class-validator';
-import { TaskStatus } from '../entities/task.entity';
+import type { TaskStatus } from '../entities/task.entity';
 
 const TASK_STATUSES: TaskStatus[] = ['backlog', 'todo', 'in_progress', 'done'];
 

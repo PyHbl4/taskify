@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { IsIn, IsOptional, IsString, MaxLength } from 'class-validator';
-import { ProjectStatus } from '../entities/project.entity';
+import type { ProjectStatus } from '../entities/project.entity';
 
 const PROJECT_STATUSES: ProjectStatus[] = ['active', 'paused', 'done'];
 

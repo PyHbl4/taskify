@@ -4,7 +4,7 @@ import { PassportStrategy } from '@nestjs/passport';
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { TokensConfig } from '../../config/tokens.config';
 import { Role } from '../../common/decorators/roles.decorator';
-import { AuthenticatedUser } from '../../users/users.types';
+import type { AuthenticatedUser } from '../../users/users.types';
 import { JwtPayload } from '../interfaces/jwt-payload.interface';
 
 @Injectable()

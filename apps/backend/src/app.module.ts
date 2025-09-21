@@ -36,16 +36,16 @@ import { TasksModule } from './tasks/tasks.module';
         const { autoLoadEntities: _autoLoadEntities, ...dataSourceOptions } =
           options as TypeOrmModuleOptions;
         if (process.env.NODE_ENV === 'test') {
-          const { newDb } = await import('pg-mem');
+          const { DataType, newDb } = await import('pg-mem');
           const db = newDb({ autoCreateForeignKeyIndices: true });
           db.public.registerFunction({
             name: 'current_database',
-            returns: 'text',
+            returns: DataType.text,
             implementation: () => 'test',
           });
           db.public.registerFunction({
             name: 'version',
-            returns: 'text',
+            returns: DataType.text,
             implementation: () => 'pg-mem',
           });
           const dataSource = db.adapters.createTypeormDataSource(

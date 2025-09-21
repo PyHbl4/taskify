@@ -9,7 +9,7 @@ import { CurrentUser } from '../common/decorators/user.decorator';
 import { Roles } from '../common/decorators/roles.decorator';
 import { JwtAuthGuard } from '../common/guards/jwt-auth.guard';
 import { RolesGuard } from '../common/guards/roles.guard';
-import { AuthenticatedUser } from './users.types';
+import type { AuthenticatedUser } from './users.types';
 import { UsersService } from './users.service';
 import { UserResponseDto } from './dtos/user-response.dto';
 

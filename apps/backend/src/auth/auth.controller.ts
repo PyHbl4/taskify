@@ -8,9 +8,10 @@ import {
 } from '@nestjs/swagger';
 import { CurrentUser } from '../common/decorators/user.decorator';
 import { JwtAuthGuard } from '../common/guards/jwt-auth.guard';
-import { AuthenticatedUser } from '../users/users.types';
+import type { AuthenticatedUser } from '../users/users.types';
 import { UserResponseDto } from '../users/dtos/user-response.dto';
-import { AuthResult, AuthService } from './auth.service';
+import { AuthService } from './auth.service';
+import type { AuthResult } from './auth.service';
 import { AuthResponseDto } from './dtos/auth-response.dto';
 import { LoginDto } from './dtos/login.dto';
 import { RefreshTokenDto } from './dtos/refresh-token.dto';

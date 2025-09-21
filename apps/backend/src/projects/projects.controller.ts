@@ -17,7 +17,7 @@ import {
 import { ParseUUIDPipe } from '@nestjs/common/pipes';
 import { CurrentUser } from '../common/decorators/user.decorator';
 import { JwtAuthGuard } from '../common/guards/jwt-auth.guard';
-import { AuthenticatedUser } from '../users/users.types';
+import type { AuthenticatedUser } from '../users/users.types';
 import { ProjectsService } from './projects.service';
 import { CreateProjectDto } from './dtos/create-project.dto';
 import { ProjectResponseDto } from './dtos/project-response.dto';

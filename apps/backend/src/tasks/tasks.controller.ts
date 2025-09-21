@@ -18,7 +18,7 @@ import {
 import { ParseUUIDPipe } from '@nestjs/common/pipes';
 import { CurrentUser } from '../common/decorators/user.decorator';
 import { JwtAuthGuard } from '../common/guards/jwt-auth.guard';
-import { AuthenticatedUser } from '../users/users.types';
+import type { AuthenticatedUser } from '../users/users.types';
 import { CreateTaskDto } from './dtos/create-task.dto';
 import { FilterTasksDto } from './dtos/filter-tasks.dto';
 import { TaskResponseDto } from './dtos/task-response.dto';
