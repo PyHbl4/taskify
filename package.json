@@ -2,11 +2,18 @@
   "name": "taskify",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
     "dev": "turbo run dev",
+    "dev:backend": "turbo run dev --filter=@taskify/backend",
+    "build": "turbo run build",
+    "build:backend": "turbo run build --filter=@taskify/backend",
     "lint": "turbo run lint",
+    "lint:fix": "turbo run lint -- --fix",
+    "check-types": "turbo run check-types",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "check-types": "turbo run check-types"
+    "format:check": "prettier --check \"**/*.{ts,tsx,md}\"",
+    "db:up": "docker compose -f infra/docker/docker-compose.yml up -d",
+    "db:down": "docker compose -f infra/docker/docker-compose.yml down",
+    "db:logs": "docker compose -f infra/docker/docker-compose.yml logs -f db"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
@@ -14,7 +21,7 @@
     "typescript": "5.9.2"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "packageManager": "npm@10.9.3",
   "workspaces": [
