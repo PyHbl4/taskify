@@ -1,0 +1,46 @@
+.
+├─ apps/
+│  ├─ backend/                # позже: NestJS
+│  └─ frontend/               # позже: Next.js (App Router)
+├─ packages/
+│  ├─ config/                 # shared tsconfig/eslint/prettier
+│  ├─ types/                  # zod/ts типы, которые делим между FE/BE
+│  ├─ db/                     # entities, миграции, seeds
+│  ├─ auth/                   # токены/гварды/куки-утилиты
+│  └─ ui/                     # общие React-компоненты (shadcn расширения)
+├─ docs/
+│  ├─ AGENTS.md               # главный вход для ИИ-агентов (ниже шаблон)
+│  ├─ ARCHITECTURE.md         # high-level схема, диаграммы, модульные границы
+│  ├─ API.md                  # ручки + ссылки на openapi.json
+│  ├─ ROADMAP.md              # 3–4 ближайших релиза
+│  ├─ HOWTOs/                 # короткие «как запустить X»
+│  └─ adr/
+│     ├─ 0001-db-and-orm.md   # ADR: Postgres + TypeORM
+│     └─ TEMPLATE.md
+├─ .codex/                    # «шины» для агента (его правила и подсказки)
+│  ├─ EXECUTION_POLICY.md     # что агент НЕ делает (shell, npm и т.п.)
+│  ├─ PROJECT_CONTEXT.md      # куда смотреть в первую очередь (пути/файлы)
+│  ├─ TASK_TEMPLATE.md        # формат постановки задач для агента
+│  ├─ PROMPTS.md              # готовые промпты (скелеты «сделай миграцию», …)
+│  └─ CHECKLISTS.md           # чек-листы для ревью (BE/FE/тесты/безопасность)
+├─ infra/
+│  ├─ docker/
+│  │  ├─ docker-compose.yml
+│  │  ├─ backend.Dockerfile
+│  │  ├─ frontend.Dockerfile
+│  │  └─ nginx.conf
+│  └─ scripts/
+│     ├─ migrate.ts           # обёртки запуска миграций
+│     └─ backup.sh
+├─ .github/
+│  ├─ ISSUE_TEMPLATE/
+│  │  ├─ bug_report.md
+│  │  └─ feature_request.md
+│  ├─ PULL_REQUEST_TEMPLATE.md
+│  └─ workflows/
+│     ├─ ci.yml               # lint+typecheck+tests
+│     └─ deploy.yml           # build docker + миграции
+├─ CHANGELOG.md               # keep a changelog (conventional commits)
+├─ CONTRIBUTING.md            # как запускать локально, код-стайл
+├─ CODEOWNERS                 # кто ревьюит что
+└─ README.md
